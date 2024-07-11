@@ -1,0 +1,27 @@
+.drink-item {
+	width: 49px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	cursor: pointer;
+	padding: 10px;
+	transition: transform 0.2s;
+	background-color: white;
+	border: 1px solid black;
+	border-radius: 3px;
+}
+
+.drink-item.disabled {
+	cursor: default;
+}
+
+.drink-item:not(.disabled):hover {
+	transform: scale(1.05);
+}
+
+.drink-image {
+	width: 50px;
+	max-width: 100%;
+	height: auto;
+	display: block;
+}

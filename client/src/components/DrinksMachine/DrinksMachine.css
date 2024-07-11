@@ -1,0 +1,29 @@
+.drinks-machine {
+	height: 100%;
+	width: 400px;
+	padding: 10px;
+	text-align: center;
+	background-color: red;
+	border-radius: 10px;
+	position: relative;
+	box-sizing: border-box;
+}
+
+.drinks-list {
+	width: 290px;
+	height: 80vh;
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	gap: 10px;
+	padding: 10px;
+	box-sizing: border-box;
+	background-color: #e0e0e0;
+	border: 5px solid black;
+	border-radius: 5px;
+	overflow-y: auto;
+	scrollbar-width: thin;
+}
+
+.drinks-list.disabled {
+	opacity: 0.9;
+}

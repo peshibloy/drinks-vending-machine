@@ -1,0 +1,12 @@
+{
+	"name": "fsm-js-lib",
+	"version": "1.0.0",
+	"main": "dist/fsm.js",
+	"types": "dist/fsm.d.ts",
+	"scripts": {
+		"build": "tsc"
+	},
+	"devDependencies": {
+		"typescript": "^5.5.3"
+	}
+}
