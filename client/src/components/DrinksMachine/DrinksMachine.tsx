@@ -24,9 +24,6 @@ const DrinksMachine = () => {
 		setSelectedDrink(drink);
 	}, [transition]);
 
-	// TODO: 
-	// 1. handle retry when purchase fails
-	// 2. check why getDrinks is called twice
 	const handlePurchase = useCallback(async () => {
 		if (selectedDrink) {
 			transition(EVENTS.PURCHASE);

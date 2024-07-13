@@ -6,20 +6,20 @@
 
 .dispense-area {
 	width: 80%;
-	height: 80px;
+	height: 90px;
 	display: flex;
 	justify-content: center;
 	align-items: center;
 	background-color: black;
-	border-radius: 3px;
+	border-radius: 20px;
 	margin-top: 10px;
 }
 
 .dispense-window {
 	width: 50%;
-	height: 60px;
+	height: 70px;
 	background-color: white;
-	border-radius: 3px;
+	border-radius: 15px;
 }
 
 .dispense-window .drink-image {

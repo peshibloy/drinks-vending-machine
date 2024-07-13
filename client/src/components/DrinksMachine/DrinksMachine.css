@@ -4,7 +4,7 @@
 	padding: 10px;
 	text-align: center;
 	background-color: red;
-	border-radius: 10px;
+	border-radius: 40px;
 	position: relative;
 	box-sizing: border-box;
 }
@@ -19,7 +19,7 @@
 	box-sizing: border-box;
 	background-color: #e0e0e0;
 	border: 5px solid black;
-	border-radius: 5px;
+	border-radius: 30px;
 	overflow-y: auto;
 	scrollbar-width: thin;
 }
