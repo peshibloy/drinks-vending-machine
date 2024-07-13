@@ -29,7 +29,7 @@ class FSM {
 		}
 	}
 
-	getState(): string {
+	get state(): string {
 		return this.currState;
 	}
 }
