@@ -1,25 +1,30 @@
 import { useCallback } from 'react';
 import classNames from 'classnames';
 import { Drink } from '../../types';
+import DrinkImage from '../DrinkImage/Drinkimage';
 
 import './DrinkItem.css';
 
 interface props {
 	drink: Drink,
+	purchased: boolean,
 	handleClick: Function,
-	disabled: boolean
 };
 
-const DrinkItem: React.FC<props> = ({ drink, handleClick, disabled }) => {
+const DrinkItem: React.FC<props> = ({ drink, purchased, handleClick }) => {
+	const clickable = !drink.sold;
+
 	const handleClickWrapper = useCallback(() => {
-		if (!disabled) {
+		if (clickable) {
 			handleClick(drink);
 		}
-	}, [disabled, drink, handleClick]);
+	}, [clickable, drink, handleClick]);
 
 	return (
-		<div className={classNames('drink-item', { disabled })} onClick={handleClickWrapper}>
-			<img src={`images/${drink.fileName}`} alt={drink.name} className="drink-image" />
+		<div className={classNames('drink-item', { clickable })} onClick={handleClickWrapper}>
+			<div className={classNames({ 'fade-out': purchased })}>
+				{!drink.sold && <DrinkImage drink={drink} />}
+			</div>
 		</div>
 	);
 };

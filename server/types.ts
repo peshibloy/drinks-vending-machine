@@ -3,4 +3,5 @@ export interface Drink {
 	name: string;
 	price: number;
 	fileName: string;
+	sold?: boolean,
 }

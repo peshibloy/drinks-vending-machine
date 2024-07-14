@@ -1,23 +1,20 @@
-.dispense-area-container {
-	width: 100%;
-	display: flex;
-	justify-content: center;
-}
-
 .dispense-area {
 	width: 80%;
-	height: 90px;
+	height: 100px;
 	display: flex;
 	justify-content: center;
 	align-items: center;
 	background-color: black;
 	border-radius: 20px;
+	margin-right: auto;
+    margin-left: auto;
 	margin-top: 10px;
 }
 
 .dispense-window {
+	position: absolute;
 	width: 50%;
-	height: 70px;
+	height: 80px;
 	background-color: white;
 	border-radius: 15px;
 }
@@ -25,7 +22,20 @@
 .dispense-window .drink-image {
 	width: 55px;
 	display: inline;
-	margin-top: -20px;
 	transform: rotate(90deg);
 	cursor: pointer;
+}
+
+@keyframes fadeIn {
+	from {
+		opacity: 0;
+	}
+
+	to {
+		opacity: 1;
+	}
+}
+
+.dispense-window .dispensed-drink.fade-in {
+	animation: fadeIn 2s forwards;
 }

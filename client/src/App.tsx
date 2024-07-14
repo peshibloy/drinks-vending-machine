@@ -1,4 +1,4 @@
-import DrinksMachine from './components/DrinksMachine/DrinksMachine';
+import DrinksMachine from './pages/DrinksMachine/DrinksMachine';
 
 import './App.css';
 

@@ -1,6 +1,6 @@
 .drinks-machine {
 	height: 100%;
-	width: 400px;
+	width: 450px;
 	padding: 10px;
 	text-align: center;
 	background-color: red;
@@ -10,11 +10,10 @@
 }
 
 .drinks-list {
-	width: 290px;
+	width: 75%;
 	height: 80vh;
 	display: grid;
 	grid-template-columns: repeat(3, 1fr);
-	gap: 10px;
 	padding: 10px;
 	box-sizing: border-box;
 	background-color: #e0e0e0;
@@ -22,8 +21,17 @@
 	border-radius: 30px;
 	overflow-y: auto;
 	scrollbar-width: thin;
+	align-items: center;
 }
 
-.drinks-list.disabled {
-	opacity: 0.9;
+.overlay {
+	position: absolute;
+	border-radius: 30px;
+	top: 15px;
+	left: 15px;
+	width: calc(75% - 25px);
+	height: calc(80vh - 10px);
+	background: rgba(255, 255, 255, 0.5);
+	pointer-events: all;
+	z-index: 1000;
 }

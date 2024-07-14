@@ -1,9 +1,9 @@
-import { Drink } from '../../types';
+import { Drink } from '../../types/index';
 
 import './InfoPanel.css';
 
 interface props {
-	drink: Drink | null,
+	drink?: Drink,
 	message: string | undefined,
 	disabled: boolean,
 	handlePurchase: (event: React.MouseEvent<HTMLButtonElement, MouseEvent>) => void,
