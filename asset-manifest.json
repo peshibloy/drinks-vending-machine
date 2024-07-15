@@ -1,13 +1,18 @@
 {
   "files": {
-    "main.css": "/drinks-vending-machine/static/css/main.74ec14fb.css",
-    "main.js": "/drinks-vending-machine/static/js/main.252f3aaa.js",
+    "main.css": "/drinks-vending-machine/static/css/main.402bc92d.css",
+    "main.js": "/drinks-vending-machine/static/js/main.a0a1bf11.js",
+    "static/media/coca_cola.png": "/drinks-vending-machine/static/media/coca_cola.000ece1b41e07e2f0ed7.png",
+    "static/media/seven_up.png": "/drinks-vending-machine/static/media/seven_up.1851907afbe931cf79a8.png",
+    "static/media/fanta.png": "/drinks-vending-machine/static/media/fanta.8831ff08c14c6aa32cd6.png",
+    "static/media/pepsi.png": "/drinks-vending-machine/static/media/pepsi.87341a09411aa6a89423.png",
+    "static/media/fanta_lemon.png": "/drinks-vending-machine/static/media/fanta_lemon.2c348f08583058834d96.png",
     "index.html": "/drinks-vending-machine/index.html",
-    "main.74ec14fb.css.map": "/drinks-vending-machine/static/css/main.74ec14fb.css.map",
-    "main.252f3aaa.js.map": "/drinks-vending-machine/static/js/main.252f3aaa.js.map"
+    "main.402bc92d.css.map": "/drinks-vending-machine/static/css/main.402bc92d.css.map",
+    "main.a0a1bf11.js.map": "/drinks-vending-machine/static/js/main.a0a1bf11.js.map"
   },
   "entrypoints": [
-    "static/css/main.74ec14fb.css",
-    "static/js/main.252f3aaa.js"
+    "static/css/main.402bc92d.css",
+    "static/js/main.a0a1bf11.js"
   ]
 }
