@@ -4,7 +4,7 @@
 	"private": true,
 	"homepage": "https://peshibloy.github.io/drinks-vending-machine/",
 	"scripts": {
-		"start": "react-scripts start",
+		"start": "cd fsm-js-lib && npm run build && cd ../ && react-scripts start",
 		"build": "react-scripts build",
 		"test": "react-scripts test",
 		"eject": "react-scripts eject",

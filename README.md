@@ -10,7 +10,7 @@ This project implements a drinks vending machine using Node.js and React with Ty
 
 ```bash
 git clone drinks-vending-machine
-cd server
+cd drinks-vending-machine/server
 npm install
 npm start
 ```
@@ -37,9 +37,6 @@ npm test
 
 ```bash
 cd drinks-vending-machine/client
-cd fsm-js-lib
-npm run build
-cd ../
 npm install
 npm start
 ```
