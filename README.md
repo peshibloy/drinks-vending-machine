@@ -29,26 +29,6 @@ npm test
 - **GET `/api/drinks`**: Fetches the list of available drinks.
 - **POST `/api/purchase`**: Initiates the purchase of a selected drink.
 
-### Structure
-
-- `__tests__/`
-	- `controllers/`
-		- `drinksController.test.ts`
-		- `purchaseController.test.ts`
-	- `api.test.ts`
-- `src/`
-	- `controllers/`
-		- `drinksController.ts`
-		- `purchaseController.ts`
-	- `data/`
-		- `drinks.ts`
-	- `routes/`
-		- `drinks.ts`
-		- `purchase.ts`
-	- `index.ts`
-	- `types.ts`
-- `package.json`
-
 ---
 
 ## Client (React)
@@ -72,52 +52,6 @@ Note: Currently, the library is temporarily stored inside the client folder.
 
 - Displays a list of available drinks fetched from the server.
 - Allows users to select and purchase drinks, triggering state transitions managed by the FSM library.
-
-### Structure
-
-- `fsm-js-lib/`
-	- `src/`
-		- `index.ts`
-		- `hooks/`
-			- `useFsm.ts`
-- `public/`
-- `src/`
-	- `__mocks__/`
-		- `mockApi.ts`
-		- `mockData.ts`
-	- `components/`
-		- `DispenseArea/`
-			- `DispenseArea.scss`
-			- `DispenseArea.tsx`
-		- `Drinkimage/`
-			- `Drinkimage.scss`
-			- `Drinkimage.tsx`
-		- `DrinkItem/`
-			- `DrinkItem.scss`
-			- `DrinkItem.tsx`
-		- `InfoPanel/`
-			- `InfoPanel.scss`
-			- `InfoPanel.tsx`
-	- `config/`
-		- `drinksMachine.ts`
-	- `hooks/`
-		- `useDrinksMachine.ts`
-		- `useFetchDrinks.ts`
-	- `pages/`
-		- `DrinksMachine/`
-			- `DrinksMachine.scss`
-			- `DrinksMachine.tsx`
-			- `utils.ts`
-	- `types/`
-		- `hooks.ts`
-		- `index.ts`
-	- `utils/`
-		- `data.ts`
-	- `App.scss`
-	- `App.tsx`
-	- `index.scss`
-	- `index.tsx`
-- `package.json`
 
 ### Screenshots
 ![Screenshot](./images/screenshot.png)
