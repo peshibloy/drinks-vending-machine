@@ -6,7 +6,7 @@ This project implements a drinks vending machine using Node.js and React with Ty
 
 ## Server (Node.js)
 
-### Installation & running the Server
+### Installation & Running the Server
 
 ```bash
 git clone drinks-vending-machine
@@ -33,10 +33,13 @@ npm test
 
 ## Client (React)
 
-### Installation & running the Client
+### Installation & Running the Client
 
 ```bash
-cd client
+cd drinks-vending-machine/client
+cd fsm-js-lib
+npm run build
+cd ../
 npm install
 npm start
 ```

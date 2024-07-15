@@ -16,7 +16,8 @@
 		"classnames": "^2.5.1",
 		"fsm-js-lib": "file:./fsm-js-lib/dist",
 		"react": "^18.3.1",
-		"react-dom": "^18.3.1"
+		"react-dom": "^18.3.1",
+		"sass": "^1.77.8"
 	},
 	"devDependencies": {
 		"@types/node": "^16.18.101",

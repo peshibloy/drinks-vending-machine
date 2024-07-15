@@ -11,7 +11,7 @@ interface props {
 };
 
 const DispenseArea: React.FC<props> = ({ drink, handleClick }) => {
-	const [dispense, setDispense] = useState(true);
+	const [dispense, setDispense] = useState(false);
 
 	useEffect(() => {
 		if (drink) {
@@ -26,7 +26,7 @@ const DispenseArea: React.FC<props> = ({ drink, handleClick }) => {
 	return (
 		<div className="dispense-area">
 			<div className="dispense-window">
-				<div className={classNames('dispensed-drink', { 'fade-in': !dispense }) }>
+				<div className={classNames('dispensed-drink', { 'fade-in': !dispense && drink }) }>
 					{!dispense && drink && (
 						<DrinkImage drink={drink} onClick={handleClick} />
 					)}

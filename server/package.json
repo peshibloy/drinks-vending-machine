@@ -4,7 +4,7 @@
 	"main": "index.js",
 	"scripts": {
 		"start": "npx ts-node src/index.ts",
-		"test": "npx jest"
+		"test": "set PORT=5001 && npx jest"
 	},
 	"keywords": [],
 	"engines": {
