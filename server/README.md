@@ -1,54 +1,171 @@
-// TODO List: 
-2. Show wait and failure warnings
-3. check why getDrinks is called twice (on init)
-4. Writing tests:
-	1. API tests
-	2. React component tests
-	3. Writing client-side mock server responses for testing the use case application
-offline.
-5. A working demo deployed as a GitHub page for the assignment repository.
-6. Use real database
-7. chnage to sass
-8. upodate readme
-9. Add logs to server
-10. change to static path 
+# Drinks Vending Machine Project
 
-Frontend/ Full Stack developer technical assignment
-Intro
-“Finite state machines are a great conceptual model for many concerns facing
-developers – from conditional UI, connectivity monitoring & management to
-initialization and more. State machines can simplify tangled paths of asynchronous
-code, they're easy to test, and they inherently lend themselves to helping you avoid
-unexpected edge-case-state pitfalls.” (http://machina-js.org/)
+Intuit - Frontend/ Full Stack developer technical assignment
 
-Your assignment is to
-● Implement your own version of FSM (Finite State Machine) as a JavaScript
-library for React.js applications.
-● Write a simple React.js use case application for demonstrating the library
-usage.
-Notes
+This project implements a drinks vending machine using Node.js and React with TypeScript, integrating the FSM (Finite State Machine) library to manage state transitions within the vending machine.
 
-1. You don’t have to create two projects for the assignment, a dedicated folder
-for the library is just fine, but it should be plugged out very easily.
-2. The use case application can be written as a pure React.js or as a React-Redux
-application.
-3. The use case application must have a server-side integration (with any of the
-free mock servers out there).
-If you want to implement your own Node.js small server-side application, we
-don’t mind of course.
-4. It’s up to you to decide which version of JavaScript to use (ES5, ES6, ES7, even
-TypeScript if you’d like).
-5. The assignment must have a GitHub repository.
+## Server (Node.js)
 
-Bonus/Extra points will be given for
-1. Writing tests.
-2. Using Typescript
-3. Writing client-side mock server responses for testing the use case application
-offline.
-4. A working demo deployed as a GitHub page for the assignment repository.
+### Requirements
 
-Other things to keep in mind
-● We really love creativity and good-looking web pages.
-● We love a self-explained and organized codebase.
-● We want to see how good you are so feel free to add anything you think may
-support it.
+- Node.js (version >= 18.x)
+- npm (or yarn)
+
+### Installation
+
+1. Clone the repository:
+```bash
+git clone drinks-vending-machine
+cd server
+```
+2. Install dependencies:
+```bash
+npm install
+```
+
+### Running the Server
+
+To start the Node.js server:
+```bash
+npm start
+```
+
+The server will start running at `http://localhost:5000`.
+
+### Tests
+
+To run API tests and unit tests:
+```bash
+npm test
+```
+
+### Endpoints
+
+- **GET `/api/drinks`**: Fetches the list of available drinks.
+- **POST `/api/purchase`**: Initiates the purchase of a selected drink.
+
+### Structure
+
+- `__tests__/`
+	- `controllers/`
+		- `drinksController.test.ts`
+		- `purchaseController.test.ts`
+	- `api.test.ts`
+- `src/`
+	- `controllers/`
+		- `drinksController.ts`
+		- `purchaseController.ts`
+	- `data/`
+		- `drinks.ts`
+	- `routes/`
+		- `drinks.ts`
+		- `purchase.ts`
+	- `index.ts`
+	- `types.ts`
+- `package.json`
+
+### Usage
+
+Ensure the server is running, and the endpoints are accessible for the client application.
+
+---
+
+## Client (React)
+
+### Requirements
+
+- Node.js (version >= 18.x)
+- npm (or yarn)
+
+### Installation
+
+1. Navigate to the client directory:
+```bash
+cd client
+```
+2. Install dependencies:
+```bash
+npm install
+```
+
+### Running the Client
+
+To start the React client application:
+
+```bash
+npm start
+```
+
+The client will run at `http://localhost:3000`.
+
+### Dependencies
+
+- `fsm-js-lib` (Finite State Machine library): Utilized to manage state transitions within the drinks vending machine.
+Note: Currently, the library is temporarily stored inside the client folder.
+
+### Features
+
+- Displays a list of available drinks fetched from the server.
+- Allows users to select and purchase drinks, triggering state transitions managed by the FSM library.
+
+### Structure
+
+- `fsm-js-lib/`
+	- `src/`
+		- `index.ts`
+		- `hooks/`
+			- `useFsm.ts`
+- `public/`
+- `src/`
+	- `__mocks__/`
+		- `mockApi.ts`
+		- `mockData.ts`
+	- `components/`
+		- `DispenseArea/`
+			- `DispenseArea.scss`
+			- `DispenseArea.tsx`
+		- `Drinkimage/`
+			- `Drinkimage.scss`
+			- `Drinkimage.tsx`
+		- `DrinkItem/`
+			- `DrinkItem.scss`
+			- `DrinkItem.tsx`
+		- `InfoPanel/`
+			- `InfoPanel.scss`
+			- `InfoPanel.tsx`
+	- `config/`
+		- `drinksMachine.ts`
+	- `hooks/`
+		- `useDrinksMachine.ts`
+		- `useFetchDrinks.ts`
+	- `pages/`
+		- `DrinksMachine/`
+			- `DrinksMachine.scss`
+			- `DrinksMachine.tsx`
+			- `utils.ts`
+	- `types/`
+		- `hooks.ts`
+		- `index.ts`
+	- `utils/`
+		- `data.ts`
+	- `App.scss`
+	- `App.tsx`
+	- `index.scss`
+	- `index.tsx`
+- `package.json`
+
+---
+
+### Additional Notes
+
+- Implemented simulated client-side server responses to facilitate offline testing of the application's use cases and to support GitHub Pages.
+- A working demo deployed as a [GitHub page](https://peshibloy.github.io/drinks-vending-machine/).
+
+---
+
+### What's next 
+1. Implement loading state display.
+2. Enhance error messaging for purchase failures.
+3. Introduce unit tests for React components.
+4. Integrate with a real database.
+5. Separate fsm-js-lib into its own repository and publish it on NPM.

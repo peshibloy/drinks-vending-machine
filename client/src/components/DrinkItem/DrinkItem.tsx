@@ -3,7 +3,7 @@ import classNames from 'classnames';
 import { Drink } from '../../types';
 import DrinkImage from '../DrinkImage/Drinkimage';
 
-import './DrinkItem.css';
+import './DrinkItem.scss';
 
 interface props {
 	drink: Drink,
@@ -12,7 +12,7 @@ interface props {
 };
 
 const DrinkItem: React.FC<props> = ({ drink, purchased, handleClick }) => {
-	const clickable = !drink.sold;
+	const clickable = !drink.isSold;
 
 	const handleClickWrapper = useCallback(() => {
 		if (clickable) {
@@ -23,7 +23,7 @@ const DrinkItem: React.FC<props> = ({ drink, purchased, handleClick }) => {
 	return (
 		<div className={classNames('drink-item', { clickable })} onClick={handleClickWrapper}>
 			<div className={classNames({ 'fade-out': purchased })}>
-				{!drink.sold && <DrinkImage drink={drink} />}
+				{!drink.isSold && <DrinkImage drink={drink} />}
 			</div>
 		</div>
 	);

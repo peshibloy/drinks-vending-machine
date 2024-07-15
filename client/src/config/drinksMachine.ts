@@ -1,5 +1,5 @@
 import FSM from 'fsm-js-lib';
-import { EVENTS, STATES } from '../../types';
+import { EVENTS, STATES } from '../types';
 
 const drinkMachineFSMConfig = {
 	default: STATES.START,

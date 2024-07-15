@@ -22,7 +22,7 @@ describe('purchaseController', () => {
 	it('purchase should complete successfully with correct inputs', () => {
 		purchase(req as Request, res as Response);
 		const selectedDrink = drinks.find(({ id }) => req.body.id === id);
-		expect(selectedDrink?.sold).toBe(true);
+		expect(selectedDrink?.isSold).toBe(true);
 		expect(res.send).toHaveBeenCalledWith('completed');
 	});
 

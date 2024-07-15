@@ -3,7 +3,7 @@ import classNames from 'classnames';
 import DrinkImage from '../../components/DrinkImage/Drinkimage';
 import { Drink } from '../../types';
 
-import './DispenseArea.css';
+import './DispenseArea.scss';
 
 interface props {
 	drink?: Drink,

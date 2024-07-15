@@ -10,22 +10,26 @@
 	border-radius: 10px;
 	transition: transform 0.2s;
 	margin: auto;
-}
 
-.drink-item div {
-	width: 66px;
-	height: 110px;
-	display: flex;
-	align-items: center;
-	justify-content: center;
-}
+	div {
+		width: 66px;
+		height: 110px;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+	}
+	
+	&.clickable {
+		cursor: pointer;
 
-.drink-item.clickable {
-	cursor: pointer;
-}
+		&:hover {
+			transform: scale(1.05);
+		}
+	}
 
-.drink-item.clickable:hover {
-	transform: scale(1.05);
+	.fade-out {
+		animation: fadeOut 1s forwards;
+	}
 }
 
 @keyframes fadeOut {
@@ -36,8 +40,4 @@
 	to {
 		opacity: 0;
 	}
-}
-
-.drink-item .fade-out {
-	animation: fadeOut 1s forwards;
 }

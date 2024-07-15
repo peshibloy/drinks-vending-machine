@@ -1,7 +1,7 @@
 import { Drink } from '../../types';
 import classNames from 'classnames';
 
-import './DrinkImage.css';
+import './DrinkImage.scss';
 
 interface props {
 	drink: Drink,

@@ -1,4 +1,4 @@
-import { Drink } from "../../types";
+import { Drink } from "../types";
 
 export const drinks: Drink[] = [
 	{ id: 1, name: 'Coca Cola', price: 4.5, fileName: 'coca_cola.png' },

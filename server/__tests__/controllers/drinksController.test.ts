@@ -7,14 +7,20 @@ describe('drinksController', () => {
 	let res: Partial<Response>;
 
 	beforeEach(() => {
-		req = {};
+		req = {
+			body: {
+				id: 1,
+				price: 4.5,
+			},
+		};
 		res = {
-			json: jest.fn(),
+			status: jest.fn().mockReturnThis(),
+			send: jest.fn(),
 		};
 	});
 
 	it('getDrinks should return all drinks', () => {
 		getDrinks(req as Request, res as Response);
-		expect(res.json).toHaveBeenCalledWith(drinks);
+		expect(res.send).toHaveBeenCalledWith(drinks);
 	});
 });

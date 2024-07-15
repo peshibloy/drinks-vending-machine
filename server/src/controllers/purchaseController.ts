@@ -10,6 +10,6 @@ export const purchase = (req: Request, res: Response) => {
 	if (price !== selectedDrink.price) {
 		return res.status(400).send('Wrong price');
 	}
-	selectedDrink.sold = true;
-	res.send('completed');
+	selectedDrink.isSold = true;
+	res.status(200).send('completed');
 };

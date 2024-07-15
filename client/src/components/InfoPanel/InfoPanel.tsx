@@ -1,6 +1,6 @@
 import { Drink } from '../../types/index';
 
-import './InfoPanel.css';
+import './InfoPanel.scss';
 
 interface props {
 	drink?: Drink,

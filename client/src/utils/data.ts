@@ -5,7 +5,7 @@ import { Drink } from '../types';
 const BASE_URL = 'http://localhost:5000';
 
 export const getDrinks = async () => {
-	if (process.env.NODE_ENV === 'production') {
+	if (process.env.NODE_ENV === 'production') { // temporary to enable running in Github pages
 		return fetchLocalDrinks();
 	}
 	return axios.get(`${BASE_URL}/api/drinks`)
@@ -16,7 +16,7 @@ export const getDrinks = async () => {
 		});
 };
 
-export const purchase = async (drink: Drink) => {
+export const purchase = async (drink: Drink) => { // temporary to enable running in Github pages
 	if (process.env.NODE_ENV === 'production') {
 		return Promise.resolve('completed');
 	}
