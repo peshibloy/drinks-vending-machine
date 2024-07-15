@@ -6,27 +6,12 @@ This project implements a drinks vending machine using Node.js and React with Ty
 
 ## Server (Node.js)
 
-### Requirements
+### Installation & running the Server
 
-- Node.js (version >= 18.x)
-- npm (or yarn)
-
-### Installation
-
-1. Clone the repository:
 ```bash
 git clone drinks-vending-machine
 cd server
-```
-2. Install dependencies:
-```bash
 npm install
-```
-
-### Running the Server
-
-To start the Node.js server:
-```bash
 npm start
 ```
 
@@ -64,35 +49,15 @@ npm test
 	- `types.ts`
 - `package.json`
 
-### Usage
-
-Ensure the server is running, and the endpoints are accessible for the client application.
-
 ---
 
 ## Client (React)
 
-### Requirements
+### Installation & running the Client
 
-- Node.js (version >= 18.x)
-- npm (or yarn)
-
-### Installation
-
-1. Navigate to the client directory:
 ```bash
 cd client
-```
-2. Install dependencies:
-```bash
 npm install
-```
-
-### Running the Client
-
-To start the React client application:
-
-```bash
 npm start
 ```
 
@@ -153,6 +118,9 @@ Note: Currently, the library is temporarily stored inside the client folder.
 	- `index.scss`
 	- `index.tsx`
 - `package.json`
+
+### Screenshots
+![Screenshot](./images/screenshot.png)
 
 ---
 
