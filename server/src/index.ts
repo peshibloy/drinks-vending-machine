@@ -1,8 +1,8 @@
 import express from 'express';
 import cors from 'cors';
+import morgan from 'morgan';
 import drinksRouter from './routes/drinks';
 import purchaseRouter from './routes/purchase';
-
 
 const app = express();
 const port = 5000;
@@ -10,10 +10,13 @@ const port = 5000;
 app.use(cors());
 app.use(express.json());
 
-// TODO: Add API unit tests
+app.use(morgan('dev'));
+
 app.use('/api/drinks', drinksRouter);
 app.use('/api/purchase', purchaseRouter);
 
 app.listen(port, () => {
 	console.log(`Server running at http://localhost:${port}`);
 });
+
+export default app;
