@@ -21,3 +21,7 @@ export enum EVENTS {
 	PURCHASE_FAILURE = 'PURCHASE_FAILURE',
 	DELIVERED = 'DELIVERED',
 };
+
+export interface Map<T> {
+	[key: string]: T;
+}
